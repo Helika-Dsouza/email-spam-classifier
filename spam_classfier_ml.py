@@ -10,16 +10,21 @@ warnings.filterwarnings("ignore", category=UndefinedMetricWarning)
 
 data = {
     'text': [
-        'Win money now!', 
-        'Hello, how are you?', 
-        'Limited offer, buy now!', 
-        'Meeting at 10am', 
-        'Congratulations, you won a prize!', 
-        'Lunch tomorrow?'
+        'Win money now!',
+        'Hello, how are you?',
+        'Limited offer, buy now!',
+        'Meeting at 10am',
+        'Congratulations, you won a prize!',
+        'Lunch tomorrow?',
+        'Claim your free gift today!',
+        'Are we still on for dinner?',
+        'Exclusive deal just for you!',
+        'Project deadline is Friday',
+        'You’ve been selected for a reward!',
+        'Can you send me the report?'
     ],
-    'label': [1, 0, 1, 0, 1, 0] 
+    'label': [1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
 }
-
 df = pd.DataFrame(data)
 
 X_train, X_test, y_train, y_test = train_test_split(
@@ -48,4 +53,5 @@ def predict_spam(text):
     return 'Spam' if pred[0] == 1 else 'Not Spam'
 
 print(predict_spam("Free money for you!"))
+
 
